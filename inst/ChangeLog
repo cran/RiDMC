@@ -1,0 +1,183 @@
+0.10-12 28 Mar 2010
+	fix configure script and description: better display dependency on lua-5.1
+
+0.10-11 27 Mar 2010
+	fix configure script: add lua5.1 include folder to cflags via pkg-config
+
+0.10-10 26 Dec 2010
+	rm windows binaries from the source distrib: now include full lua-5.1.4 sources
+	typo in model description printout
+	fix manpages sources format for R-2.10.x
+	fix lua lib handling in configure script under ubuntu-9.10
+	robustified lyap. exp. plotting and printing funcs (previously hanging on inf. values)
+	added OL3G model to package archive
+	added utility 'makeFunPower' function
+	improved getModelMap function: now can handle matrix input
+
+0.10-9	17 Aug 2009
+	added 'makePalette' utility fun. manpage
+	improved lexp input par and var args handling
+	improved LyapunovExponentsMap and BifurcationMap input handling for 2-parms models
+
+0.10-8	30 Jul 2009
+	improved palette specification in basins plot: now smarter and more flexible
+	improved palette specification in bifurcation maps: now smarter and more flexible
+	improved bifurcation map labels
+	fixed some annoyances in rasterGrob editing
+	basins of attraction print method now shows raster contents on screen
+	lyap. exp. map print method now reuses raster print method
+	bifurcation map print method now reuses raster print method
+	added a sensible print method for raster objects
+	improved basins rendering: now can be conveniently edited after plotting
+	fixed bug in basins rendering code: basin-attractor color pairs correspondence
+	  was not respected
+
+0.10-7	20 Jul 2009
+	added explicit 'gp' argument to plot.idmc_trajectoryList
+	added plot customization example to cycles manpage
+	fixed plotGrob options passing plot.idmc_trajectoryList
+	robustified Cycles input handling
+	added the modified multiplier-accelerator model to package models archive
+	improved 'Model' input handling: now the use of 'exModelFile' is implicit
+	added colorLegendGrob manpage
+	improved colorLegend: now can be 'safely' edited from within a plotGrob
+	improved trajList plot: possibility to set pch per-trajectory
+	improved trajectory plot: default plot type depends on model type
+	improved colorLegend graphical object: now can span multiple columns
+
+0.10-6	13 Jul 2009
+	fixed and improved LyapunovExponents input handling
+	fixed and improved Bifurcation input handling
+	updated basin, raster, bifurcation, lyap.exp. map man pages
+
+0.10-5	1 Jul 2009
+	updated idmclib to latest version (fixes a basin_slow bug)
+	fixed Basin rendering bug, showing sometimes when 'slow' method is used
+
+0.10-4	30 Jun 2009
+	robustified basins of attraction function input handling
+	improved lexp diagram input args handling
+	improved basins of attraction rendering: now reuses raster rendering code
+	fixed lexpMap: x and y axes were swapped
+	now lexpMap plot method reuses raster rendering code
+	now bifurcationMap plot method reuses raster rendering code
+	added new raster graphical object, with improved editing capabilities
+	fixed bifurcation plot: xlim,ylim options were ignored
+	improved axes apparence in plotGrob
+	fixed plotGrob viewports clipping
+	improved 'Bifurcation' input handling
+	updated idmclib to version 0.10.2
+	simplified configure mechanism: less robust, but no more relying on pkg-config
+	refactored Basins plotting func: now uses plotGrob facilities to add legend
+	added optional 'legendObj' component to base 'plotGrob' class
+	improved internal function '.sanitizeNamedVector', added testcases
+	refactored LyapExpMap plotting: now uses Raster plotting facilities
+	refactored Raster plotting functions for easier reusability
+	refactored LyapExpMap: now internally uses Raster class facilities
+	refactored Raster internals to use the new support methods
+	added support methods to Raster class
+	refactored Trajectory input args handling
+	added BifurcationMap function (to be tested)
+	added optional horizontal and vertical label settings to Raster objects
+	refactored (cleaned) LyapExpMap input args handling
+	cleaned LyapunovExponentsMap print method
+	added utility internal functions getModelNPar, getModelNVar
+
+0.10-3	17 Jun 2009
+	internal improvement to plot.idmc_trajectoryList
+	fixed mistake in Model()$Jf function: matrix is filled by row!
+	added utility getModelMap function
+	added discrete 2D sets manipulation functions (see 'Raster' manpage)
+	fixed periodic cycles man page
+
+0.10-2
+	added much improved automatic periodic cycles scanning and plotting
+	improved trajectoryList plotting method
+		now horiz. and vertical limits are choosed more carefully
+	added open rectangular domains handling
+	added utility 'getModelF' function
+
+0.10-1
+	updated examples in main package help page
+	fixed setting of 'pch' option in trajectoryList
+	fixed editing of plotGrob objects
+	now all plotting functions (invisibly) returns plotGrobs
+	improved doc of some internal code
+	improved internal basin plotting code (non user-visible)
+
+0.10-0
+	upgraded idmclib to version 0.10.0
+	fixed legend in Lyap. exp. map plot
+	all plot methods gain an 'add' argument (default to FALSE)
+
+0.9-0
+	added some as.matrix methods (now all idmc_* classes have an as.matrix method)
+	fixed (many) bugs in Trajectory, TrajectoryList, LyapunpovExponents plotting functions
+	added detailed LUA syntax errors reporting
+	upgraded idmclib to version 0.9.0
+
+0.8-5
+	improved some error messages
+	upgraded idmclib to version 0.8.1
+	Jf and NumJf model methods returns matrices instead of vectors
+	added attractors trajectories option to basin plot
+	fixed bug in plotting basins with custom colors
+	fixed bug in plotting basins with different x/y resolution
+
+0.8-4
+	fixed orientation in LyapunovExponentsMap plotting
+	fixed bug in C sources affecting lexp and related functions
+	fixed diverging exponents handling in LyapunovExponentsMap
+
+0.8-3
+	added LyapunovExponentsMap function (with plotting method)
+	added TrajectoryList utility function (with plotting method)
+	improved xy like plot automatic ranges setting
+	internally reworked all end-user plotting functions
+
+0.8-2
+	rewritten all plotting function basing on the grid system
+
+0.8-1
+	redesigned basins plotting function
+	fixed configure script for *nix platforms
+	stripped debug infos from gsl win binaries
+
+0.8-0
+	swapped print and summary methods for model objects
+	updated to idmclib-0.8.0
+	fixed potential bug in cycles routine
+	fixed compatibility with R-2.6.0
+
+0.7-1
+	added detailed print method for bifurcation objects
+	improved documentation
+0.7-0
+	added interactive file prompt to Model, typo fix to exModelFile man page
+        cleaned cycles function possible return values
+	misc fixes to man pages
+	added ODE solvers details in Trajectory man page
+	removed broken option among ODE solvers
+	unified and cleaned lyap. exp. interface, added print method
+	unified and cleaned discrete/continuous Trajectory functions
+0.6-2
+	misc additions to man pages
+	improved exModelFile
+	added idmclib version number printing at startup
+
+0.6-1
+	added options to basins of attraction plot method
+	upgraded to idmclib-0.6.1 (contains bug fixes)
+
+0.6-0
+	added slow basins algorithm option to Basin function
+	upgraded to idmclib-0.6.0
+0.5-3
+	added relevant example in bifurcation man page
+	added Lyapunov exponents helper functions
+0.5-2
+	added and documented implementation of bifurcation plot
+0.5-1
+	cleaned trajectories manipulation code
+0.5-0	
+	first public release
