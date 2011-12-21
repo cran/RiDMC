@@ -1,4 +1,4 @@
-704c84d5a212f867981556abec77aebd *DESCRIPTION
+b743f7f9ff903eb40a765aad3f16f553 *DESCRIPTION
 b79ffd2d4ace4123a22b186ca74f62a3 *NAMESPACE
 2d2ab708ad4af301acfad2c08227cca1 *R/basin.R
 921cb0b7a099372b8c6e14c6674aa5a3 *R/bifurcation.R
@@ -23,7 +23,7 @@ ead48f0caaa972b956ea904fe837815c *R/sets.R
 72d39566ee29a7ba3a79c90e48ef796c *cleanup
 9540ecd46870e52e2f78597188dd0d1d *configure
 5f17a60031161abadbd1380ade35fa5b *configure.ac
-526f432cc2d3e688c8a294dd6b9dc0a6 *inst/ChangeLog
+f390ba849114c2227e58b7a2d51384cf *inst/ChangeLog
 d6d1089beabf4a54c171062b6c9a0f01 *inst/models/Economic/bh.lua
 67c09c00a0d823963567060065828183 *inst/models/Economic/cournot.lua
 823e2dea9b4fd91a51f69ba783f1be8c *inst/models/Economic/cournotad.lua
@@ -91,7 +91,7 @@ e7473b1053d99cd6f6f5c69c2ac0c8db *man/lexp.Rd
 39c11c1ef1a1dc4ec89cb8a4470cccb4 *man/raster.Rd
 11f58bc51bdc13c0c18e06a73757f90b *man/sets.Rd
 78e07ce807a647d9d11fa465d12f6b98 *src/Makevars.in
-eff25f04526ec2baba3d480e57387f6e *src/Makevars.win
+f0ca07577c7cd6e6f0d99ce9c8d15468 *src/Makevars.win
 30d226530f0fa8878f698a50fab9c4f2 *src/attractor.c
 93b821a240e7954eab402c1cd39b147e *src/attractors_list.c
 fa8966312879a0b2af60deba5f7221a1 *src/basin.c
